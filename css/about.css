@@ -1,12 +1,27 @@
 /* About Page Styles */
 .about-hero {
-    background: url('../images/Panchmukhi1.jpg') center/cover;
+    position: relative;
     height: 70vh;
-    display: flex;
-    align-items: center;
-    color: white;
+    overflow: hidden;
+  }
+
+  .about-hero .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* send image behind text */
+  }
+
+  .about-hero .hero-content {
+    position: relative;
     text-align: center;
-}
+    padding-top: 20vh;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+  }
 .hero-content h1{
     color: #f9f9f9;
 }
