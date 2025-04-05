@@ -1,7 +1,6 @@
 /* About Page Styles */
 .about-hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-                url('../assets/Stockclouds.jpg') center/cover;
+    background-image: url('../assets/Stockclouds.jpg') center/cover;
     height: 70vh;
     display: flex;
     align-items: center;
