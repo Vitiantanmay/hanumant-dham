@@ -17,6 +17,6 @@
 
 2. **Local Development** (Optional):
    ```bash
-   git clone https://github.com/<username>/<repo>.git
+   git clone https://github.com/<Vitiantanmay>/<repo>.git
    cd <repo>
    open index.html  # Opens in default browser
