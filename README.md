@@ -1,4 +1,4 @@
-# Hanumant Dham - Official Website
+# Hanumant Dham - Official Website Github
 
 🌿 Welcome to the official repository for **Hanumant Dham**, a sacred destination dedicated to Lord Hanuman. This website serves as an informational portal for devotees, events, and donations.
 
