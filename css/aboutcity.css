@@ -96,6 +96,45 @@
     max-height: 300px;
     padding-bottom: 1.5rem;
   }
+
+
+/* Reset & base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+#journey-highlight {
+  height: 100vh;
+  background: linear-gradient(to bottom, #fff8dc, #f4a261);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.unique-heritage-intro .content-wrapper {
+  padding: 20px;
+}
+
+.unique-heritage-intro h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.unique-heritage-intro p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+
+
+
+
   
   /* Responsive Adjustments */
   @media (max-width: 768px) {
