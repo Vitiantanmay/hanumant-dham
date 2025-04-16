@@ -109,7 +109,7 @@ body, html {
 /* Hero Section */
 #journey-highlight {
   height: 100vh;
-  background: url('/images/bundicover.jpg') no-repeat center center;
+  background: url('/images/bundicover1.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed; /* optional: creates parallax feel */
   display: flex;
