@@ -120,7 +120,7 @@ html, body {
 #journey-highlight {
   width: 100vw;
   height: 100vh;
-  background-image: url('/images/bundicover1.jpg'); /* replace with actual path */
+  background-image: url('/images/bundicover.jpg'); /* replace with actual path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
