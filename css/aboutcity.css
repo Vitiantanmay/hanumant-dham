@@ -120,7 +120,7 @@ html, body {
 #journey-highlight {
   width: 100%;
   height: 100vh;
-  background: url('/mnt/data/bundicover.jpg') center center no-repeat;
+  background: url('/images/bundicover.jpg') center center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
