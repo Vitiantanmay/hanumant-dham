@@ -92,7 +92,7 @@ section {
 
 .btn.secondary:hover {
     background: var(--primary);
-    color: var(--white);
+/*     color: var(--white); */
 }
 
 /* ================ */
