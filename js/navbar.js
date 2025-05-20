@@ -74,3 +74,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the initial timer
     startInactivityTimer();
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    // Close all dropdowns except the current one
+    function closeOtherDropdowns(currentDropdown) {
+        dropdowns.forEach(dropdown => {
+            if (dropdown !== currentDropdown && dropdown.classList.contains('active')) {
+                dropdown.classList.remove('active');
+            }
+        });
+    }
+    
+    // Toggle dropdown on click (mobile)
+    dropdowns.forEach(dropdown => {
+        const btn = dropdown.querySelector('.dropdown-btn');
+        
+        btn.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                closeOtherDropdowns(dropdown);
+            }
+        });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+});
