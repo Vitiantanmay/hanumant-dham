@@ -130,15 +130,18 @@ section {
     font-weight: 500;
     font-size: 1.1rem;
     cursor: pointer;
-    padding: 0;
+    padding: 0.5rem 0;
     font-family: inherit;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .dropdown-btn::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
@@ -146,8 +149,17 @@ section {
     transition: width 0.3s ease;
 }
 
-.dropdown:hover .dropdown-btn::after {
+.dropdown:hover .dropdown-btn::after,
+.dropdown.active .dropdown-btn::after {
     width: 100%;
+}
+
+.dropdown-btn .icon {
+    transition: transform 0.3s ease;
+}
+
+.dropdown.active .dropdown-btn .icon {
+    transform: rotate(180deg);
 }
 
 .dropdown-content {
@@ -162,13 +174,14 @@ section {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 8px 8px;
     overflow: hidden;
-    z-index: 1;
+    z-index: 100;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
     display: block;
     opacity: 1;
     transform: translateY(0);
@@ -189,8 +202,14 @@ section {
     padding-left: 20px;
 }
 
-/* Mobile menu adjustments (if needed) */
+/* Mobile menu adjustments */
 @media (max-width: 768px) {
+    .dropdown-btn {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+    }
+    
     .dropdown-content {
         position: static;
         display: none;
@@ -198,14 +217,25 @@ section {
         transform: none;
         box-shadow: none;
         background-color: transparent;
+        backdrop-filter: none;
+        width: 100%;
+        min-width: auto;
+        transition: none;
     }
     
     .dropdown.active .dropdown-content {
         display: block;
     }
+    
+    .dropdown-content a {
+        padding: 0.75rem 1.5rem;
+        color: var(--dark);
+    }
+    
+    .dropdown-content a:hover {
+        padding-left: 1.75rem;
+    }
 }
-
-
 
 
 
