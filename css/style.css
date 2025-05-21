@@ -85,7 +85,7 @@
   }
   
   .btn.secondary:hover {
-    background: var(--white);
+/*     background: var(--white); */
     color: var(--primary);
   }
   
