@@ -1,5 +1,4 @@
 /* About Page Styles */
-/* About Page Styles */
 .about-hero {
     position: relative;
     height: 85vh; /* Adjusted height */
@@ -62,7 +61,7 @@
 }
 
 .hero-actions .tertiary {
-    background-color: rgba(255, 255, 255, 0.2);
+/*     background-color: rgba(255, 255, 255, 0.2); */
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
