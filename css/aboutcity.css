@@ -119,7 +119,7 @@ html, body {
 /* Hero Section */
 #journey-highlight {
   width: 100%;
-  height: 100vh;
+/*   height: 100vh; */
   background: url('/images/bundicover.jpg') center center no-repeat;
   background-size: cover;
   display: flex;
