@@ -67,6 +67,7 @@
 }
 
 .hero-actions a:hover {
+    background-color: white;
     opacity: 0.9;
 }
 
