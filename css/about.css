@@ -1,76 +1,106 @@
 /* About Page Styles */
 .about-hero {
-    position: relative;
-    height: 85vh; /* Adjusted height */
-    overflow: hidden;
-    display: flex; /* Enable flexbox */
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    text-align: center; /* Center text within the content box */
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .about-hero .hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* send image behind text */
-    filter: brightness(0.7); /* Slightly darken the background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.about-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* replaces brightness filter */
+  z-index: -1;
 }
 
 .about-hero .hero-content {
-    position: relative;
-    align-items: center;
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    /* max-width: 800px; */
-    /* text-align: center; Remove this here as the parent is centering */
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* reduced shadow for faster paint */
 }
 
-/* ... rest of your about.css ... */
 .hero-content h1 {
-    font-family: 'Philosopher', serif;
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgb(64, 63, 63);
+  font-family: 'Philosopher', serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .hero-actions a {
-    background: transparent;
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    margin: 0 0.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-
-
 .hero-actions .secondary {
-    background-color: transparent;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .hero-actions .tertiary {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .hero-actions a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-actions a {
+    display: block;
+    margin: 0.5rem auto;
+    width: fit-content;
+  }
+}
+
+
+
+
+
+
 
 /* Introduction Section */
 .introduction-section {
