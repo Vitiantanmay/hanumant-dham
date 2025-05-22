@@ -91,7 +91,6 @@ section {
 }
 
 .btn.secondary:hover {
-    background: transparent;
     color: var(--white);
 }
 
