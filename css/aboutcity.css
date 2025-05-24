@@ -1,0 +1,243 @@
+/* Modern Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .about-section {
+    padding: 4rem 5%;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Cards Grid */
+  .about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    padding: 1rem 1.5rem 0;
+    font-size: 1.4rem;
+  }
+  
+  .card p {
+    padding: 0.5rem 1.5rem 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Button & Hidden Text */
+  .read-more {
+    background: #ff9933;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 1.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .read-more:hover {
+    background: #e68a2e;
+  }
+  
+  .hidden-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 1.5rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .hidden-text.active {
+    max-height: 300px;
+    padding-bottom: 1.5rem;
+  }
+
+
+
+
+
+
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Hero Section */
+#journey-highlight {
+  width: 100%;
+  height: 100vh;
+  background: url('/images/bundicover.avif') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.unique-heritage-intro .content-wrapper {
+  background-color: rgba(255, 255, 255, 0.75); /* semi-transparent for readability */
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 90%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.unique-heritage-intro h1 {
+  font-size: 2.8rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.unique-heritage-intro p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+  .unique-heritage-intro h1 {
+    font-size: 3.5rem;
+  }
+
+  .unique-heritage-intro p {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .about-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+@media (max-width: 992px) {
+    .apple-grid,
+    .donation-options {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 150px 0 80px;
+    }
+    
+    .hero-text {
+        grid-column: 1;
+        padding: 0 40px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .hero-media {
+        grid-column: 1;
+        height: 500px;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: left 0.3s ease;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.3rem;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
